@@ -1,4 +1,4 @@
-# OCTheme
+# BetterDark
 A better dark theme (in my eyes) for One Commander. Inspired by [Obsidian](https://obsidian.md/). I wish I could use similar colors in my browser, but alas, I cannot.
 
 This is work in progress, don't expect everything to look nice :)
