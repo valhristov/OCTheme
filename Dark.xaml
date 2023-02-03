@@ -36,9 +36,9 @@
     <SolidColorBrush x:Key="WindowAcrylicTintBrush" Color="#d60D0B0E" />
 
     <!--  when window is not focused it will show the MainBackgroundBrush  -->
-    <SolidColorBrush x:Key="MainBackgroundBrush" Color="#0D0B0E" />
+    <SolidColorBrush x:Key="MainBackgroundBrush" Color="#363636" />
     <!--  for other windows that don't have Acrylic effect  -->
-    <SolidColorBrush x:Key="DialogBackgroundBrush" Color="#3d3b40" />
+    <SolidColorBrush x:Key="DialogBackgroundBrush" Color="#363636" />
     <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="Transparent" />
     <!--  Set to Transparent to have Acrylic effect on side  -->
 
@@ -74,10 +74,10 @@
     <!--  Should be minimum button width + SidebarResizerBorder Thickness  -->
 
     <Style x:Key="PathPanelGroupBorder" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#2b292e" />
-        <Setter Property="Margin" Value="12,0,12,12" />
-        <Setter Property="Padding" Value="8,8,8,8" />
-        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="Background" Value="#1e1e1e" />
+        <Setter Property="Margin" Value="5,5,0,5" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="CornerRadius" Value="3" />
     </Style>
 
     <Style x:Key="PathPanelGroupTitle" TargetType="{x:Type TextBlock}">
@@ -87,18 +87,18 @@
         <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
     </Style>
 
-    <SolidColorBrush x:Key="PathPanelItemBackgroundBrush" Color="#2d2b30" />
+    <SolidColorBrush x:Key="PathPanelItemBackgroundBrush" Color="#1e1e1e" />
     <!--  Can be Transparent or a shade similar to background of PathPanelGroupBorder  -->
 
     <!--  File Browser Panel  -->
 
-    <SolidColorBrush x:Key="CurrentFolderPanelBackgroundBrush" Color="#2b292e" />
-    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.StandardLayout" Color="#2b292e" />
-    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.ColumnsLayout" Color="#2b292e" />
+    <SolidColorBrush x:Key="CurrentFolderPanelBackgroundBrush" Color="#1e1e1e" />
+    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.StandardLayout" Color="#1e1e1e" />
+    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.ColumnsLayout" Color="#1e1e1e" />
     <!--  Will be visible only when there is no Files Panel is covering it  -->
 
     <Style x:Key="FilesPanelBorder" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#2b292e" />
+        <Setter Property="Background" Value="#1e1e1e" />
         <!--  Should not be transparent or the panels will overlap on animation and will look bad  -->
     </Style>
 
@@ -108,12 +108,12 @@
         It also includes border in the accent color (see BorderThickness)
     -->
     <Style x:Key="FilesPanelEdgeBorder" TargetType="{x:Type Border}">
-        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="0" />
         <Setter Property="BorderThickness" Value="0,0,2,0" />
         <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundAccentBrush}" />
         <Setter Property="HorizontalAlignment" Value="Right" />
         <Setter Property="Width" Value="20" />
-        <Setter Property="Background">
+        <Setter Property="Background" >
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                     <!--  This one should blend in with FilesPanelBorder so make it the same  -->
@@ -137,7 +137,7 @@
                 <LinearGradientBrush MappingMode="Absolute" StartPoint="7,25" EndPoint="27,32">
                     <!--  This one should merge with FilesPanelBorder background so make it the same  -->
                     <GradientStop Offset="0" Color="#2b292e" />
-                    <GradientStop Offset="1" Color="#161616" />
+                    <GradientStop Offset="1" Color="#1e1e1e" />
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
@@ -178,10 +178,10 @@
     </Style>
 
     <Style x:Key="PreviewPanelBorder" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#2b292e" />
+        <Setter Property="Background" Value="#1e1e1e" />
     </Style>
     <Style x:Key="PreviewPanelBorder.ColumnsLayout" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#2b292e" />
+        <Setter Property="Background" Value="#1e1e1e" />
         <!--  Make the same as FilesPanelBorder Background to make it seem like one  -->
     </Style>
     <s:Double x:Key="PreviewPanelMinHeight">28</s:Double>
@@ -259,7 +259,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundAccentBrush}" />
         <Setter Property="Margin" Value="0,0,-2,0" />
         <!--  This is so that border of selected folder in column doesn't go over the edge of the panel on the right  -->
-        <Setter Property="Background" Value="#b02b292e" />
+        <Setter Property="Background" Value="#1e1e1e" />
         <!--  best if the same as FilesPanelBorder so parent folder blend into child panel  -->
     </Style>
 
@@ -301,7 +301,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Margin" Value="-2,6,-2,0" />
          These 5 if you want just line separated tabs-->
-        <Setter Property="Background" Value="#1b1a1d" />
+        <Setter Property="Background" Value="#363636" />
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="Margin" Value="0,2,2,0" />
     </Style>
@@ -312,7 +312,7 @@
         <!--  Uncomment for border around non-active tab  -->
         <!--<Setter Property="BorderThickness" Value="1,1,0,1"/>
                     <Setter Property="BorderBrush" Value="Transparent" />-->
-        <Setter Property="Background" Value="#3E3C41" />
+        <Setter Property="Background" Value="#1e1e1e" />
         <Setter Property="Padding" Value="0,2,0,0" />
         <Setter Property="Margin" Value="0,2,0,0" />
         <Setter Property="Effect" Value="{DynamicResource HoverItemEffect}" />
@@ -323,7 +323,7 @@
         <!--<Setter Property="BorderThickness" Value="2,2,2,0" />-->
         <Setter Property="Padding" Value="0,0,2,0" />
         <Setter Property="Margin" Value="0,2,2,0" />
-        <Setter Property="Background" Value="#2b292e" />
+        <Setter Property="Background" Value="#1e1e1e" />
         <!--  best if the same as FilesPanelBorder so parent folder blend into child panel  -->
     </Style>
 
@@ -363,7 +363,7 @@
         Color="#ffffff" />
 
     <!--  Flash item or right-click  -->
-    <SolidColorBrush x:Key="FlashBrush" Color="#afd9fa" />
+    <SolidColorBrush x:Key="FlashBrush" Color="#00000000" />
 
     <SolidColorBrush
         x:Key="OverlayInactiveBrowserBrush"
@@ -374,12 +374,12 @@
     <SolidColorBrush
         x:Key="OverlayCollapsingBrowserBrush"
         Opacity=".84"
-        Color="#2b292e" />
+        Color="#1e1e1e" />
 
 
 
-    <SolidColorBrush x:Key="ResizerBrush" Color="#2B292E" />
-    <SolidColorBrush x:Key="ResizerHoverBrush" Color="#353339" />
+    <SolidColorBrush x:Key="ResizerBrush" Color="#363636" />
+    <SolidColorBrush x:Key="ResizerHoverBrush" Color="#1e1e1e" />
 
     <Style x:Key="ResizerBorderBase" TargetType="{x:Type Border}">
         <Setter Property="BorderBrush" Value="{DynamicResource ResizerBrush}" />
@@ -452,7 +452,7 @@
         x:Key="FileDetailsResizerVerticalBorder"
         BasedOn="{StaticResource ResizerBorderBase}"
         TargetType="{x:Type Border}">
-        <Setter Property="BorderThickness" Value="1,0,0,0" />
+        <Setter Property="BorderThickness" Value="10,0,0,0" />
         <Setter Property="Width" Value="8" />
     </Style>
 
